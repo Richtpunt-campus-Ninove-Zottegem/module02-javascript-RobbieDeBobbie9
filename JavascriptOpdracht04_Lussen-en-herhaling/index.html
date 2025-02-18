@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raad het Getal Spel</title>
+</head>
+<body>
+    <h2>Raad het Getal Spel</h2>
+    <p>Raad het geheime getal tussen 1 en 100. Je hebt meerdere pogingen!</p>
+
+    <input type="number" id="guess" placeholder="Voer je gok in">
+    <button onclick="startSpel()">Gok!</button>
+
+    <p id="resultaat"></p>
+    <script>
+        function startSpel(){//start de code wanneer er op gok word geklicked
+        x = Math.floor(Math.random() * 101);//maakt een getal aan van tot en met 100
+        for (let i = 0; i < 99999; i++) {//maakt de loop zodat je kan blijven raden
+        y = document.getElementById("guess").value;//maakt een variable voor de ingegeven waarde
+        if(x==y) {  //kijkt of het ingegeven getal hetzelfde is als het gegenereerd getal
+            document.getElementById("resultaat").innerHTML ="juist";//als het hetzelfde is print deze code juist
+        }
+        else {
+            document.getElementById("resultaat").innerHTML ="fout";//anders print het fout
+        }
+    }
+}
+    </script>
+</body>
+</html>

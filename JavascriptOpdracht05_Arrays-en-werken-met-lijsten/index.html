@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boodschappenlijst</title>
+</head>
+<body>
+    <h2>Boodschappenlijst</h2>
+    <input type="text" id="item" placeholder="Voer een item in">
+    <button onclick="voegItemToe()">Toevoegen</button>
+    <button onclick="verwijderLaatsteItem()">Verwijderen</button>
+    <p id="lijst"></p>
+
+    <ul id="boodschappenlijst"></ul>
+
+    <script>
+        function voegItemToe(){
+            x = document.getElementById("item").value;
+            const items=[", " + x]
+            document.getElementById("lijst").innerHTML = items;
+            const ite = items
+            document.getElementById("boodschappenlijst").innerHTML = ite;
+        }
+    </script>
+</body>
+</html>
