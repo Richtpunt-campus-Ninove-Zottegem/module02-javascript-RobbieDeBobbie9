@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Welkom bij mijn quiz</h1>
+    <h1>Welke van de 4 talen is geen opmaaktaal</h1>
+    <div class="vragen">
+    <ol>
+    <li><input type="radio" id="antw1"  name="vraag">html</input></li>
+    <li><input type="radio" id="antw2"  name="vraag">css</input></li>
+    <li><input type="radio" id="antw3"  name="vraag">JavaScript</input></li>
+    <li><input type="radio" id="antw4"  name="vraag">xml</input></li>
+    </ol>
+    </div>
+    <button onclick="verzend()" id="knop">verzenden</button>
+    <div class="vragen">
+    <h2 id="resultaat"></h2>
+    </div>
+    <script>
+        function verzend() {
+        if(document.getElementById("antw1").checked) {
+            document.getElementById("resultaat").innerHTML ="fout";
+        }
+        else if(document.getElementById("antw2").checked) {
+            document.getElementById("resultaat").innerHTML ="fout";
+        }
+        else if(document.getElementById("antw3").checked) {
+            document.getElementById("resultaat").innerHTML ="juist";
+        }
+        else if(document.getElementById("antw4").checked) {
+            document.getElementById("resultaat").innerHTML ="fout";
+        }
+    }
+    </script>
+</body>
+</html>
